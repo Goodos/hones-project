@@ -1,0 +1,76 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/prologue.rpy", line 254: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/prologue.rpy", line 256: expected statement.
+    "Я слышал, что Архимагистр ордена вчера прибыла в столицу на королевскую аудиенцию. Где она сейчас?":
+                                                                                                        ^
+
+File "game/prologue.rpy", line 259: expected statement.
+    "Сколько времени отводится на выполнение задачи?":
+                                                     ^
+
+File "game/prologue.rpy", line 262: expected statement.
+    "Разрешите откланяться, Ваше Величество.":
+                                             ^
+
+File "game/prologue.rpy", line 338: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/prologue.rpy", line 340: expected statement.
+    "Мои методы более гуманны. Я пришёл просто поговорить.":
+                                                           ^
+
+File "game/prologue.rpy", line 343: expected statement.
+    "Ничто бы мне не доставило большего наслаждения, как пытки скверной еретички. Но увы, я здесь не за этим.":
+                                                                                                              ^
+
+File "game/prologue.rpy", line 346: expected statement.
+    "Мне больно видеть великого Архимагистра Ордена в таком виде. Обвинённого в ереси, закованного в цепи, униженного…":
+                                                                                                                       ^
+
+File "game/prologue.rpy", line 360: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/prologue.rpy", line 362: expected statement.
+    "Именно так. Мне выпала честь нести справедливость от имени Монарха и Святой Церкви.":
+                                                                                         ^
+
+File "game/prologue.rpy", line 365: expected statement.
+    "Можешь быть уверена ещё и в том, что каждый замешанный в твоей ереси понесёт справедливое возмездие. А потом… Я приду за тобой.":
+                                                                                                                                     ^
+
+File "game/prologue.rpy", line 368: expected statement.
+(Perhaps you left out a " at the end of the first line.)
+    "За свою службу в рядах Инквизиции я
+                судил многих: фермеров, обратившихся к
+                древним ритуалам; купцов, торговавших с
+                эльфами; богатеев, коллекционирующих
+                запретные артефакты; даже дворян, упавших в
+                сладострастные руки порока. Но воинов
+                Церкви, такое будет впервые.":
+
+File "game/prologue.rpy", line 405: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/prologue.rpy", line 407: expected statement.
+    "Оставить пленницу в покое.":
+                                ^
+
+File "game/prologue.rpy", line 410: expected statement.
+    "Попытаться привести Архимагистра в чувство, ударив несколько раз её по щекам":
+                                                                                  ^
+
+File "game/prologue.rpy", line 413: expected statement.
+    "Провести большим пальцем по верхней губе Архимагистра.":
+                                                            ^
+
+Ren'Py Version: Ren'Py 8.2.0.24012702
+Tue Mar  5 00:49:25 2024
