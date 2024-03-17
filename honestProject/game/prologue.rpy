@@ -12,13 +12,7 @@ label prologue:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    "Сквозь пелену сна к тебе тянется чья-то рука. Кончики пальцев
-    нежно касаются твоей щеки. Пальцы обжигают твою щёку могильным
-    холодом, словно весенняя капель пробирающаяся сквозь последние
-    сугробы. Просто прикосновение. Не больше, не меньше. Ты не
-    можешь вспомнить чьи это руки. Как не можешь вспомнить когда
-    оно произошло. Но почему-то ты уверен полностью, что это
-    прощальное прикосновение."
+    $ renpy.say(None, testdick[0])
 
     scene bg roomCastle
     with fade
@@ -26,16 +20,13 @@ label prologue:
     show lieut idle #at right
     with dissolve
 
-    lieut "Учитель!" 
+    $ renpy.say(lieut, testdick[1])
     with vpunch
 
     #hide lieut
     #with dissolve
 
-    "Громкий стук в дверь возвращает тебя в реальный мир. Видимо,
-    случилось что-то срочное, раз твой помощник пришёл лично будить
-    тебя. Хорошо потянувшись, ты запрыгиваешь в тапочки и,
-    почёсывая бок направляешься к двери."
+    $ renpy.say(None, testdick[2])
 
     #show lieut idle #at left with dissolve
 

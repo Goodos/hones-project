@@ -4,7 +4,29 @@
 
 init offset = -1
 
+init python: 
+    def load_text():
+        testdick1 = []
 
+        if _preferences.language == None:
+            pref = 'en'
+        else:
+            pref = 'ru'
+            
+        import csv
+
+        with open('E:\\renpy-8.2.0-sdk\\honest-project\\honestProject\\game\\text_'+pref+'.csv') as f:
+            reader = csv.reader(f, delimiter=';')
+            for row in reader:
+                testdick1.append(str(row))
+        f.close()
+
+        return testdick1
+
+    def set_dictionary():
+        globals()['testdick'] = load_text()
+
+define testdick = load_text()
 ################################################################################
 ## Styles
 ################################################################################
@@ -734,13 +756,12 @@ screen preferences():
         vbox:
             hbox:
                 box_wrap True
-
-                if renpy.variant("pc") or renpy.variant("web"):
-
+                
+                if main_menu and renpy.variant("pc") or renpy.variant("web"):
                     vbox:
                         label _("Language")
-                        textbutton "English" action Language(None)
-                        textbutton "Русский" action Language("russian")
+                        textbutton "English" action [Language(None), Function(set_dictionary)]
+                        textbutton "Русский" action [Language("russian"), Function(set_dictionary)]
 
                 #template for other platforms
                 # vbox:
