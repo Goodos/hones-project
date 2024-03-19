@@ -12,7 +12,7 @@ label prologue:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    $ renpy.say(None, testdick[0])
+    $ renpy.say(testdick[0][0], testdick[0][1])
 
     scene bg roomCastle
     with fade
@@ -20,25 +20,25 @@ label prologue:
     show lieut idle #at right
     with dissolve
 
-    $ renpy.say(lieut, testdick[1])
+    $ renpy.say(testdick[1][0], testdick[1][1])
     with vpunch
 
     #hide lieut
     #with dissolve
 
-    $ renpy.say(None, testdick[2])
+    $ renpy.say(testdick[2][0], testdick[2][1])
 
     #show lieut idle #at left with dissolve
 
-    lieut "Учитель, доброе утро!"
+    $ renpy.say(testdick[3][0], testdick[3][1])
 
-    me "Доброе" #with vpunch
+    $ renpy.say(testdick[4][0], testdick[4][1]) #with vpunch
     
-    lieut "Вас срочно вызывают на аудиенцию к Монарху."
+    $ renpy.say(testdick[5][0], testdick[5][1])
 
-    "В столь ранний час?"
+    $ renpy.say(testdick[6][0], testdick[6][1])
 
-    me "Хорошо, передай что я буду в Тронном зале через двадцать минут."
+    $ renpy.say(testdick[7][0], testdick[7][1])
 
     hide lieut
     with dissolve

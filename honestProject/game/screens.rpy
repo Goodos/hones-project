@@ -18,7 +18,10 @@ init python:
         with open('E:\\renpy-8.2.0-sdk\\honest-project\\honestProject\\game\\text_'+pref+'.csv') as f:
             reader = csv.reader(f, delimiter=';')
             for row in reader:
-                testdick1.append(str(row))
+                if row[0] == "0":
+                    testdick1.append([None, row[1]])
+                else:
+                    testdick1.append(row)
         f.close()
 
         return testdick1
@@ -174,6 +177,9 @@ style say_label:
     properties gui.text_properties("name", accent=True)
     xalign gui.name_xalign
     yalign 0.5
+    color gui.labels_cover
+
+    background Image("gui/namebox.png")
 
 style say_dialogue:
     properties gui.text_properties("dialogue")
