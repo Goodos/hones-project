@@ -1,38 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/prologue.rpy", line 159, in script
-    "Орден? Измена? Переворот? Как такое может быть? Ты знаком с
-Exception: Sayer '"Орден? Измена? Переворот? Как такое может быть? Ты знаком с
-    летописями Крестовых походов и в чём никогда не мог усомниться,
-    так это в лояльности Ордена к Церкви и Монарху. В конце концов,
-    именно Орден всегда был в авангарде армии. Именно Орден нёс
-    самые большие потери в походах на эльфов. Вот уж действительно
-    экстраординарное утро. Может твой друг перебрал с вином? При
-    дворе ходят слухи про его злоупотребление альгулем…К сожалению,
-    ты лишь недавно вернулся с поимки "' is not defined.
+  File "game/prologue.rpy", line 15, in script
+    $ say(GetTextLine(0))
+  File "game/prologue.rpy", line 15, in <module>
+    $ say(GetTextLine(0))
+TypeError: say() missing 1 required positional argument: 'what'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/prologue.rpy", line 159, in script
-    "Орден? Измена? Переворот? Как такое может быть? Ты знаком с
-  File "D:\progs\RenPy\renpy-8.2.0-sdk\renpy\ast.py", line 2557, in execute
-    Say.execute(self)
-  File "D:\progs\RenPy\renpy-8.2.0-sdk\renpy\ast.py", line 575, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "D:\progs\RenPy\renpy-8.2.0-sdk\renpy\ast.py", line 464, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer '"Орден? Измена? Переворот? Как такое может быть? Ты знаком с
-    летописями Крестовых походов и в чём никогда не мог усомниться,
-    так это в лояльности Ордена к Церкви и Монарху. В конце концов,
-    именно Орден всегда был в авангарде армии. Именно Орден нёс
-    самые большие потери в походах на эльфов. Вот уж действительно
-    экстраординарное утро. Может твой друг перебрал с вином? При
-    дворе ходят слухи про его злоупотребление альгулем…К сожалению,
-    ты лишь недавно вернулся с поимки "' is not defined.
+  File "game/prologue.rpy", line 15, in script
+    $ say(GetTextLine(0))
+  File "D:\progs\RenPy\renpy-8.2.0-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\progs\RenPy\renpy-8.2.0-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/prologue.rpy", line 15, in <module>
+    $ say(GetTextLine(0))
+TypeError: say() missing 1 required positional argument: 'what'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.0.24012702
 honestProject 1.0
-Tue Mar  5 00:53:54 2024
+Wed Mar 20 23:00:28 2024

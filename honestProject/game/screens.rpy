@@ -14,8 +14,8 @@ init python:
             pref = 'ru'
             
         import csv
-
-        with open('E:\\renpy-8.2.0-sdk\\honest-project\\honestProject\\game\\text_'+pref+'.csv') as f:
+        pathname = 'prologue_text_'+pref+'.csv'
+        with open(renpy.loader.transfn(pathname)) as f:
             reader = csv.reader(f, delimiter=';')
             for row in reader:
                 if row[0] == "0":
@@ -28,6 +28,10 @@ init python:
 
     def set_dictionary():
         globals()['testdick'] = load_text()
+
+    def GetTextLine(id):
+        say(globals()['testdick'][id - 1][0], globals()['testdick'][id - 1][1])
+
 
 define testdick = load_text()
 ################################################################################
