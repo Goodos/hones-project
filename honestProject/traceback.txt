@@ -1,26 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/prologue.rpy", line 15, in script
-    $ say(GetTextLine(0))
-  File "game/prologue.rpy", line 15, in <module>
-    $ say(GetTextLine(0))
-TypeError: say() missing 1 required positional argument: 'what'
+  File "game/prologue.rpy", line 23, in script
+    $ GetTextLine(2)
+  File "game/prologue.rpy", line 23, in <module>
+    $ GetTextLine(2)
+  File "game/screens.rpy", line 33, in GetTextLine
+    say(globals()['testdick'][id - 1][0], globals()['testdick'][id - 1][1])
+IndexError: list index out of range
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/prologue.rpy", line 15, in script
-    $ say(GetTextLine(0))
+  File "game/prologue.rpy", line 23, in script
+    $ GetTextLine(2)
   File "D:\progs\RenPy\renpy-8.2.0-sdk\renpy\ast.py", line 823, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "D:\progs\RenPy\renpy-8.2.0-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/prologue.rpy", line 15, in <module>
-    $ say(GetTextLine(0))
-TypeError: say() missing 1 required positional argument: 'what'
+  File "game/prologue.rpy", line 23, in <module>
+    $ GetTextLine(2)
+  File "game/screens.rpy", line 33, in GetTextLine
+    say(globals()['testdick'][id - 1][0], globals()['testdick'][id - 1][1])
+IndexError: list index out of range
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.0.24012702
 honestProject 1.0
-Wed Mar 20 23:00:28 2024
+Wed Mar 20 23:58:44 2024

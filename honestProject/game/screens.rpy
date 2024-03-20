@@ -19,7 +19,7 @@ init python:
             reader = csv.reader(f, delimiter=';')
             for row in reader:
                 if row[0] == "0":
-                    testdick1.append([None, row[1]])
+                    testdick1.append([None, row[1]])#дописать метод на парсинг всех элементов строки, а не двух
                 else:
                     testdick1.append(row)
         f.close()
@@ -30,6 +30,7 @@ init python:
         globals()['testdick'] = load_text()
 
     def GetTextLine(id):
+
         say(globals()['testdick'][id - 1][0], globals()['testdick'][id - 1][1])
 
 
