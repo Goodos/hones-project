@@ -12,26 +12,24 @@ init python:
             pref = 'en'
         else:
             pref = 'ru'
-            
         import csv
         pathname = 'prologue_text_'+pref+'.csv'
         with open(renpy.loader.transfn(pathname)) as f:
             reader = csv.reader(f, delimiter=';')
             for row in reader:
                 if row[0] == "0":
-                    testdick1.append([None, row[1]])#дописать метод на парсинг всех элементов строки, а не двух
+                    testdick1.append([None] + row[1:])
                 else:
                     testdick1.append(row)
         f.close()
-
         return testdick1
 
     def set_dictionary():
         globals()['testdick'] = load_text()
 
     def GetTextLine(id):
-
-        say(globals()['testdick'][id - 1][0], globals()['testdick'][id - 1][1])
+        for i in range(1, len(globals()['testdick'][id - 1])):
+            say(globals()['testdick'][id - 1][0], globals()['testdick'][id - 1][i])
 
 
 define testdick = load_text()
