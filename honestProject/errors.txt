@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 22: invalid syntax
-                else
+File "game/prologue.rpy", line 209: expected statement.
+    at move_right
+    ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Thu Mar 21 23:06:21 2024
+Sat Mar 23 00:12:10 2024

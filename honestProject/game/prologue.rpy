@@ -3,10 +3,9 @@ label prologue:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    # play music "audio/ye.mp3" fadeout 1.0 fadein 1.0
+    play music "audio/dream.mp3" fadeout 1.0 fadein 1.0 volume 0.7
 
-    scene bg dream with fade:
-        blur 3
+    scene bg dream with fade
     
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -14,10 +13,12 @@ label prologue:
 
     $ GetTextLine(1)
 
-    scene bg roomCastle
-    with fade
+    stop music fadeout 1.0
 
-    show lieut idle #at right
+    scene bg roomCastle
+    with fade    
+
+    show lieutenant idle #at right
     with dissolve
 
     $ GetTextLine(2)
@@ -165,7 +166,7 @@ label prologue:
 
         $ GetTextLine(49)
 
-        show archMaster exhausted
+        show archmaster exhausted
         with dissolve
 
         $ GetTextLine(50)
@@ -188,7 +189,7 @@ label prologue:
 
             label dungeonCastleArchMasterDialogue2:
 
-                show archMaster idle
+                show archmaster idle
                 with dissolve
 
                 $ GetTextLine(57)
@@ -197,17 +198,20 @@ label prologue:
 
                 $ GetTextLine(59)
 
-                show archMaster concussion
+                show archmaster concussion
                 with dissolve
 
                 $ GetTextLine(60)
 
                 $ chs = GetTextLine(61)
+
+                show archmaster concussion at move_right
+
                 $ renpy.display_menu([(chs[0], "dungeonCastleArchMasterDialogue3"), (chs[1], "dungeonCastleArchMasterDialogue3"), (chs[2], "dungeonCastleArchMasterDialogue3")])
-                
+
                 label dungeonCastleArchMasterDialogue3:
 
-                    show lieutenant idle
+                    show lieutenant idle at left
                     with dissolve
 
                     $ GetTextLine(62)
