@@ -15,6 +15,8 @@ label prologue:
 
     stop music fadeout 1.0
 
+    play music "audio/ye.mp3" fadeout 1.0 fadein 1.0 volume 0.3
+
     scene bg roomCastle
     with fade    
 
