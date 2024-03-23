@@ -1,6 +1,7 @@
 honestProject/log.txt
 honestProject/.vscode
-honestProject/game/saves/
-honestProject/game/cache/
-honestProject-1.0-dists/
+honestProject/game/saves
+honestProject/game/cache
+honestProject-1.0-dists
 .vscode
+*.rpyc
