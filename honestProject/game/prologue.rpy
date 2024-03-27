@@ -5,7 +5,7 @@ label prologue:
 
     play music "audio/dream.mp3" fadeout 1.0 fadein 1.0 volume 0.7
 
-    scene bg dream with fade
+    scene bg prolDream with fade
     
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -25,6 +25,8 @@ label prologue:
 
     $ GetTextLine(2)
     with vpunch
+
+    #show screen debugWin("test")
 
     #hide lieut
     #with dissolve
@@ -75,6 +77,7 @@ label prologue:
     $ renpy.display_menu([(chs[0], "toHall"), (chs[1], "toHall"), (chs[2], "toHall")])
 
     label toHall:
+
         $ GetTextLine(18)
 
         $ GetTextLine(19)
@@ -163,6 +166,7 @@ label prologue:
         $ GetTextLine(48)
 
     label dungeonInCastle:
+        
         scene bg dungeonCastle
         with fade
 
@@ -189,44 +193,42 @@ label prologue:
             $ chs = GetTextLine(56)
             $ renpy.display_menu([(chs[0], "dungeonCastleArchMasterDialogue2"), (chs[1], "dungeonCastleArchMasterDialogue2"), (chs[2], "dungeonCastleArchMasterDialogue2")])
 
-            label dungeonCastleArchMasterDialogue2:
+        label dungeonCastleArchMasterDialogue2:
 
-                show archmaster idle
-                with dissolve
+            show archmaster idle
+            with dissolve
 
-                $ GetTextLine(57)
+            $ GetTextLine(57)
 
-                $ GetTextLine(58)
+            $ GetTextLine(58)
 
-                $ GetTextLine(59)
+            $ GetTextLine(59)
 
-                show archmaster concussion
-                with dissolve
+            show archmaster concussion
+            with dissolve
 
-                $ GetTextLine(60)
+            $ GetTextLine(60)
 
-                $ chs = GetTextLine(61)
+            $ chs = GetTextLine(61)
 
-                show archmaster concussion at move_right
+            show archmaster concussion at move_right
 
-                $ renpy.display_menu([(chs[0], "dungeonCastleArchMasterDialogue3"), (chs[1], "dungeonCastleArchMasterDialogue3"), (chs[2], "dungeonCastleArchMasterDialogue3")])
+            $ renpy.display_menu([(chs[0], "dungeonCastleArchMasterDialogue3"), (chs[1], "dungeonCastleArchMasterDialogue3"), (chs[2], "dungeonCastleArchMasterDialogue3")])
 
-                label dungeonCastleArchMasterDialogue3:
+        label dungeonCastleArchMasterDialogue3:
 
-                    show lieutenant idle at left
-                    with dissolve
+            show lieutenant idle at left
+            with dissolve
 
-                    $ GetTextLine(62)
+            $ GetTextLine(62)
 
-                    $ GetTextLine(63)
+            $ GetTextLine(63)
 
-                    $ GetTextLine(64)
+            $ GetTextLine(64)
 
-                    scene bg prologueEnd
-                    with fade
-                    
-                    $ GetTextLine(65)
-
-                    jump chapterOne
-
-
+            scene bg prologueEnd
+            with fade
+            
+            $ GetTextLine(65)
+    
+    jump chapterOne

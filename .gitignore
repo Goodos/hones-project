@@ -6,3 +6,4 @@ honestProject-1.0-dists
 .vscode
 *.rpyc
 honestProject/traceback.txt
+honestProject/errors.txt

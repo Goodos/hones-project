@@ -2,32 +2,6 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-image bg dream:
-    "prologue/bgDream.jpg"
-    xysize (1920, 1080)
-image bg roomCastle:
-    "prologue/bgRoomCastle.jpg"
-    xysize (1920, 1080)
-image bg hallwayCastle:
-    "prologue/bgHallwayCastle.jpg"
-    xysize (1920, 1080)
-image bg hallCastle:
-    "prologue/bgHallCastle.png"
-    xysize (1920, 1080)
-image bg dungeonCastle:
-    "prologue/bgDungeonCastle.png"
-    xysize (1920, 1080)
-
-#image lieutenant idle2
-    #zoom 0.5
-    #xycenter (0.0, 0.0)
-#image monarch idle:
-    #xysize (300, 600)
-
-#image lieutenant idle
-
-transform move_right:
-    linear 2.0 xalign 1.0
 
 #Main characters
 define me = Character("Me")
@@ -41,13 +15,29 @@ define guardian2 = Character("Guardian2")
 
 # The game starts here.
 
+screen debugWin(value):
+    vbox:
+        text value size 40
+
+label test1:
+    "bruh"
+    return
+
+label test2:
+    "hui"
+    return
+
 label start:
+
+    #call test1
+
+    #call test2
 
     jump prologue #prologue wrap
 
     jump chapterOne #chapter one wrap
 
-    jump chapterTwo #chapter two wrap
+    #call chapterTwo #chapter two wrap
 
     
 
